@@ -1,0 +1,311 @@
+import type { Agent } from "../types/valorant";
+
+export const agents: Agent[] = [
+    // ── Duelists ────────────────────────────────────────────────────────────
+    {
+        id: "jett",
+        name: "Jett",
+        role: "Duelist",
+        image: "/agents/jett.webp",
+        abilities: [
+            { key: "C", name: "Cloudburst", description: "Lance un nuage de fumée" },
+            { key: "Q", name: "Updraft", description: "Propulsion verticale" },
+            { key: "E", name: "Tailwind", description: "Dash rapide dans la direction visée" },
+            { key: "X", name: "Blade Storm", description: "Couteaux de précision létaux" },
+        ],
+    },
+    {
+        id: "reyna",
+        name: "Reyna",
+        role: "Duelist",
+        image: "/agents/reyna.webp",
+        abilities: [
+            { key: "C", name: "Leer", description: "Orbe aveuglant traversant les murs" },
+            { key: "Q", name: "Devour", description: "Consume une âme pour se soigner" },
+            { key: "E", name: "Dismiss", description: "Devient invulnérable temporairement" },
+            { key: "X", name: "Empress", description: "Mode frénésie augmentant les capacités" },
+        ],
+    },
+    {
+        id: "raze",
+        name: "Raze",
+        role: "Duelist",
+        image: "/agents/raze.webp",
+        abilities: [
+            { key: "C", name: "Boom Bot", description: "Robot cherchant les ennemis et explosant" },
+            { key: "Q", name: "Blast Pack", description: "Grenade adhésive / propulseur" },
+            { key: "E", name: "Paint Shells", description: "Grenade à fragmentation" },
+            { key: "X", name: "Showstopper", description: "Lance-roquette dévastateur" },
+        ],
+    },
+    {
+        id: "phoenix",
+        name: "Phoenix",
+        role: "Duelist",
+        image: "/agents/phoenix.webp",
+        abilities: [
+            { key: "C", name: "Blaze", description: "Mur de feu courbe" },
+            { key: "Q", name: "Curveball", description: "Flash contournant les angles" },
+            { key: "E", name: "Hot Hands", description: "Boule de feu qui soigne Phoenix" },
+            { key: "X", name: "Run It Back", description: "Respawn à la position de départ" },
+        ],
+    },
+    {
+        id: "yoru",
+        name: "Yoru",
+        role: "Duelist",
+        image: "/agents/yoru.webp",
+        abilities: [
+            { key: "C", name: "Fakeout", description: "Clone de pas sonores" },
+            { key: "Q", name: "Blindside", description: "Flash rebondissante" },
+            { key: "E", name: "Gatecrash", description: "Ancre de téléportation" },
+            { key: "X", name: "Dimensional Drift", description: "Invisibilité temporaire" },
+        ],
+    },
+    {
+        id: "neon",
+        name: "Neon",
+        role: "Duelist",
+        image: "/agents/neon.webp",
+        abilities: [
+            { key: "C", name: "Fast Lane", description: "Deux murs d'électricité parallèles" },
+            { key: "Q", name: "Relay Bolt", description: "Éclair étourdissant" },
+            { key: "E", name: "High Gear", description: "Sprint et slide" },
+            { key: "X", name: "Overdrive", description: "Rayon électrique continu" },
+        ],
+    },
+    {
+        id: "iso",
+        name: "Iso",
+        role: "Duelist",
+        image: "/agents/iso.webp",
+        abilities: [
+            { key: "C", name: "Contingency", description: "Mur de protection impénétrable" },
+            { key: "Q", name: "Undercut", description: "Frappe traversant les murs" },
+            { key: "E", name: "Double Tap", description: "Bouclier activé sur kill" },
+            { key: "X", name: "Kill Contract", description: "Duel 1v1 en dimension isolée" },
+        ],
+    },
+
+    // ── Controllers ─────────────────────────────────────────────────────────
+    {
+        id: "brimstone",
+        name: "Brimstone",
+        role: "Controller",
+        image: "/agents/brimstone.webp",
+        abilities: [
+            { key: "C", name: "Incendiary", description: "Grenade incendiaire" },
+            { key: "Q", name: "Stim Beacon", description: "Balise de buff de rapidité" },
+            { key: "E", name: "Sky Smoke", description: "Déploiement de smokes via tablette" },
+            { key: "X", name: "Orbital Strike", description: "Frappe orbitale continue" },
+        ],
+    },
+    {
+        id: "viper",
+        name: "Viper",
+        role: "Controller",
+        image: "/agents/viper.webp",
+        abilities: [
+            { key: "C", name: "Snake Bite", description: "Flaque de poison" },
+            { key: "Q", name: "Poison Cloud", description: "Fumée toxique rechargeable" },
+            { key: "E", name: "Toxic Screen", description: "Mur de fumée toxique linéaire" },
+            { key: "X", name: "Viper's Pit", description: "Zone de brouillard dense" },
+        ],
+    },
+    {
+        id: "omen",
+        name: "Omen",
+        role: "Controller",
+        image: "/agents/omen.webp",
+        abilities: [
+            { key: "C", name: "Shrouded Step", description: "Téléportation courte distance" },
+            { key: "Q", name: "Paranoia", description: "Flash traversant les murs" },
+            { key: "E", name: "Dark Cover", description: "Smoke à longue portée repositionnable" },
+            { key: "X", name: "From the Shadows", description: "Téléportation sur la carte entière" },
+        ],
+    },
+    {
+        id: "astra",
+        name: "Astra",
+        role: "Controller",
+        image: "/agents/astra.webp",
+        abilities: [
+            { key: "C", name: "Nova Pulse", description: "Étoile explosion étourdissante" },
+            { key: "Q", name: "Nebula", description: "Étoile fumée" },
+            { key: "E", name: "Dissipate", description: "Rappel d'étoile créant une fausse smoke" },
+            { key: "X", name: "Cosmic Divide", description: "Mur infini bloquant sons et balles" },
+        ],
+    },
+    {
+        id: "harbor",
+        name: "Harbor",
+        role: "Controller",
+        image: "/agents/harbor.webp",
+        abilities: [
+            { key: "C", name: "Cove", description: "Bulle d'eau protectrice" },
+            { key: "Q", name: "High Tide", description: "Mur d'eau directionnel" },
+            { key: "E", name: "Cascade", description: "Vague d'eau traversant la map" },
+            { key: "X", name: "Reckoning", description: "Geysers étourdissants en zone" },
+        ],
+    },
+    {
+        id: "clove",
+        name: "Clove",
+        role: "Controller",
+        image: "/agents/clove.webp",
+        abilities: [
+            { key: "C", name: "Meddle", description: "Grenade de décroissance" },
+            { key: "Q", name: "Pick-Me-Up", description: "Boost de soin sur kill" },
+            { key: "E", name: "Fume", description: "Smoke repositionnable" },
+            { key: "X", name: "Not Dead Yet", description: "Résurrection conditionnelle" },
+        ],
+    },
+
+    // ── Initiators ──────────────────────────────────────────────────────────
+    {
+        id: "sova",
+        name: "Sova",
+        role: "Initiator",
+        image: "/agents/sova.webp",
+        abilities: [
+            { key: "C", name: "Shock Bolt", description: "Flèche électrique rebondissante" },
+            { key: "Q", name: "Owl Drone", description: "Drone de reconnaissance" },
+            { key: "E", name: "Recon Bolt", description: "Flèche révélant les ennemis" },
+            { key: "X", name: "Hunter's Fury", description: "Trois rayons pénétrants" },
+        ],
+    },
+    {
+        id: "breach",
+        name: "Breach",
+        role: "Initiator",
+        image: "/agents/breach.webp",
+        abilities: [
+            { key: "C", name: "Aftershock", description: "Détonation traversant les murs" },
+            { key: "Q", name: "Flashpoint", description: "Flash traversant les murs" },
+            { key: "E", name: "Fault Line", description: "Séisme étourdissant" },
+            { key: "X", name: "Rolling Thunder", description: "Tremblement de terre en zone" },
+        ],
+    },
+    {
+        id: "skye",
+        name: "Skye",
+        role: "Initiator",
+        image: "/agents/skye.webp",
+        abilities: [
+            { key: "C", name: "Regrowth", description: "Soin de zone pour l'équipe" },
+            { key: "Q", name: "Trailblazer", description: "Jaguar de scouting/étourdissement" },
+            { key: "E", name: "Guiding Light", description: "Flash en forme de papillon" },
+            { key: "X", name: "Seekers", description: "Trois traqueurs révélant les ennemis" },
+        ],
+    },
+    {
+        id: "kayo",
+        name: "KAY/O",
+        role: "Initiator",
+        image: "/agents/kayo.webp",
+        abilities: [
+            { key: "C", name: "FRAG/ment", description: "Grenade à impulsion" },
+            { key: "Q", name: "FLASH/drive", description: "Flash lançable ou jetée" },
+            { key: "E", name: "ZERO/point", description: "Couteau supprimant les capacités" },
+            { key: "X", name: "NULL/cmd", description: "Surcharge supprimant toute la zone" },
+        ],
+    },
+    {
+        id: "fade",
+        name: "Fade",
+        role: "Initiator",
+        image: "/agents/fade.webp",
+        abilities: [
+            { key: "C", name: "Prowler", description: "Créature traquant les ennemis révélés" },
+            { key: "Q", name: "Seize", description: "Orbe retenant et révélant les ennemis" },
+            { key: "E", name: "Haunt", description: "Œil révélant les ennemis au sol" },
+            { key: "X", name: "Nightfall", description: "Vague de ténèbres appliquant deafen/trail" },
+        ],
+    },
+    {
+        id: "gekko",
+        name: "Gekko",
+        role: "Initiator",
+        image: "/agents/gekko.webp",
+        abilities: [
+            { key: "C", name: "Wingman", description: "Créature plantant ou défusant la spike" },
+            { key: "Q", name: "Dizzy", description: "Créature aveuglant les ennemis" },
+            { key: "E", name: "Mosh Pit", description: "Flaque d'acide explosive" },
+            { key: "X", name: "Thrash", description: "Créature géante étourdissante" },
+        ],
+    },
+
+    // ── Sentinels ────────────────────────────────────────────────────────────
+    {
+        id: "sage",
+        name: "Sage",
+        role: "Sentinel",
+        image: "/agents/sage.webp",
+        abilities: [
+            { key: "C", name: "Barrier Orb", description: "Mur de glace solide" },
+            { key: "Q", name: "Slow Orb", description: "Zone ralentissante au sol" },
+            { key: "E", name: "Healing Orb", description: "Soin sur soi ou un allié" },
+            { key: "X", name: "Resurrection", description: "Ressuscite un allié mort" },
+        ],
+    },
+    {
+        id: "cypher",
+        name: "Cypher",
+        role: "Sentinel",
+        image: "/agents/cypher.webp",
+        abilities: [
+            { key: "C", name: "Trapwire", description: "Fil piège révélant et étourdissant" },
+            { key: "Q", name: "Cyber Cage", description: "Cage de surveillance sonore" },
+            { key: "E", name: "Spycam", description: "Caméra repositionnable" },
+            { key: "X", name: "Neural Theft", description: "Révèle toute l'équipe adverse" },
+        ],
+    },
+    {
+        id: "killjoy",
+        name: "Killjoy",
+        role: "Sentinel",
+        image: "/agents/killjoy.webp",
+        abilities: [
+            { key: "C", name: "Nanoswarm", description: "Grenade à nuée de nanobots" },
+            { key: "Q", name: "Alarmbot", description: "Robot détectant et vulnérabilisant" },
+            { key: "E", name: "Turret", description: "Tourelle automatique" },
+            { key: "X", name: "Lockdown", description: "Appareil détenant tous les ennemis en zone" },
+        ],
+    },
+    {
+        id: "chamber",
+        name: "Chamber",
+        role: "Sentinel",
+        image: "/agents/chamber.webp",
+        abilities: [
+            { key: "C", name: "Trademark", description: "Piège ralentissant et alertant" },
+            { key: "Q", name: "Headhunter", description: "Pistolet lourd précis" },
+            { key: "E", name: "Rendezvous", description: "Paire d'ancres de téléportation" },
+            { key: "X", name: "Tour De Force", description: "Sniper personnalisé létal" },
+        ],
+    },
+    {
+        id: "deadlock",
+        name: "Deadlock",
+        role: "Sentinel",
+        image: "/agents/deadlock.webp",
+        abilities: [
+            { key: "C", name: "GravNet", description: "Grenade forçant les ennemis à s'accroupir" },
+            { key: "Q", name: "Sonic Sensor", description: "Capteur étourdissant au son" },
+            { key: "E", name: "Barrier Mesh", description: "Barrière infranchissable" },
+            { key: "X", name: "Annihilation", description: "Fil encochant et capturant un ennemi" },
+        ],
+    },
+    {
+        id: "vyse",
+        name: "Vyse",
+        role: "Sentinel",
+        image: "/agents/vyse.webp",
+        abilities: [
+            { key: "C", name: "Shear", description: "Barrière végétale surgissant du sol" },
+            { key: "Q", name: "Arc Rose", description: "Fleur flash se déclenchant au regard" },
+            { key: "E", name: "Razorvine", description: "Zone de plantes ralentissantes" },
+            { key: "X", name: "Steel Garden", description: "Immobilise les armes de toute la zone" },
+        ],
+    },
+];

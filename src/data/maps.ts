@@ -1,4 +1,4 @@
-import { ValorantMap } from "../types/valorant";
+import type { ValorantMap } from "../types/valorant";
 
 export const maps: ValorantMap[] = [
     {
@@ -6,24 +6,131 @@ export const maps: ValorantMap[] = [
         name: "Ascent",
         image: "/maps/ascent.webp",
         smokes: [
-        {
-            id: "1",
-            x: 35,
-            y: 40,
-            label: "Market"
-        },
-        {
-            id: "2",
-            x: 60,
-            y: 25,
-            label: "Tree"
-        }
-        ]
+            { id: "ascent-1", x: 35, y: 40, label: "Market",        team: "attacker" },
+            { id: "ascent-2", x: 60, y: 25, label: "Tree",           team: "attacker" },
+            { id: "ascent-3", x: 50, y: 50, label: "Mid Courtyard",  team: "defender" },
+            { id: "ascent-4", x: 20, y: 30, label: "A Main",         team: "defender" },
+            { id: "ascent-5", x: 78, y: 35, label: "B Main",         team: "defender" },
+        ],
     },
     {
         id: "haven",
         name: "Haven",
-        image: "/maps/haven.webp",
-        smokes: []
-    }
+        image: "/maps/haven.avif",
+        smokes: [
+            { id: "haven-1", x: 22, y: 32, label: "A Long",  team: "attacker" },
+            { id: "haven-2", x: 50, y: 22, label: "B Main",  team: "attacker" },
+            { id: "haven-3", x: 78, y: 32, label: "C Long",  team: "attacker" },
+            { id: "haven-4", x: 50, y: 52, label: "Mid",     team: "defender" },
+            { id: "haven-5", x: 35, y: 65, label: "A Short", team: "defender" },
+        ],
+    },
+    {
+        id: "split",
+        name: "Split",
+        image: "/maps/split.avif",
+        smokes: [
+            { id: "split-1", x: 28, y: 38, label: "A Ramps",  team: "attacker" },
+            { id: "split-2", x: 50, y: 55, label: "Mid Mail",  team: "defender" },
+            { id: "split-3", x: 68, y: 42, label: "B Main",   team: "attacker" },
+            { id: "split-4", x: 40, y: 25, label: "A Heaven",  team: "defender" },
+            { id: "split-5", x: 62, y: 68, label: "B Vent",   team: "attacker" },
+        ],
+    },
+    {
+        id: "bind",
+        name: "Bind",
+        image: "/maps/bind.avif",
+        smokes: [
+            { id: "bind-1", x: 30, y: 40, label: "A Short",     team: "attacker" },
+            { id: "bind-2", x: 55, y: 30, label: "A Lamps",     team: "defender" },
+            { id: "bind-3", x: 70, y: 38, label: "B Long",      team: "attacker" },
+            { id: "bind-4", x: 48, y: 58, label: "Bath",        team: "defender" },
+            { id: "bind-5", x: 25, y: 62, label: "A Teleport",  team: "defender" },
+        ],
+    },
+    {
+        id: "icebox",
+        name: "Icebox",
+        image: "/maps/icebox.webp",
+        smokes: [
+            { id: "icebox-1", x: 25, y: 35, label: "A Main",   team: "attacker" },
+            { id: "icebox-2", x: 50, y: 48, label: "Mid",      team: "defender" },
+            { id: "icebox-3", x: 72, y: 30, label: "B Main",   team: "attacker" },
+            { id: "icebox-4", x: 38, y: 20, label: "A Nest",   team: "defender" },
+            { id: "icebox-5", x: 62, y: 62, label: "B Yellow", team: "defender" },
+        ],
+    },
+    {
+        id: "breeze",
+        name: "Breeze",
+        image: "/maps/breeze.png",
+        smokes: [
+            { id: "breeze-1", x: 22, y: 42, label: "A Hall",   team: "attacker" },
+            { id: "breeze-2", x: 50, y: 50, label: "Mid",      team: "defender" },
+            { id: "breeze-3", x: 75, y: 38, label: "B Main",   team: "attacker" },
+            { id: "breeze-4", x: 35, y: 28, label: "A Cave",   team: "attacker" },
+            { id: "breeze-5", x: 65, y: 62, label: "B Elbow",  team: "defender" },
+        ],
+    },
+    {
+        id: "fracture",
+        name: "Fracture",
+        image: "/maps/fracture.webp",
+        smokes: [
+            { id: "fracture-1", x: 28, y: 45, label: "A Main",          team: "attacker" },
+            { id: "fracture-2", x: 50, y: 30, label: "Attacker Spawn",  team: "attacker" },
+            { id: "fracture-3", x: 70, y: 45, label: "B Main",          team: "attacker" },
+            { id: "fracture-4", x: 40, y: 60, label: "A Rope",          team: "defender" },
+            { id: "fracture-5", x: 60, y: 60, label: "B Arcade",        team: "defender" },
+        ],
+    },
+    {
+        id: "pearl",
+        name: "Pearl",
+        image: "/maps/pearl.webp",
+        smokes: [
+            { id: "pearl-1", x: 28, y: 42, label: "A Main",    team: "attacker" },
+            { id: "pearl-2", x: 50, y: 55, label: "Mid Plaza", team: "defender" },
+            { id: "pearl-3", x: 72, y: 42, label: "B Main",    team: "attacker" },
+            { id: "pearl-4", x: 38, y: 25, label: "A Art",     team: "defender" },
+            { id: "pearl-5", x: 62, y: 25, label: "B Link",    team: "attacker" },
+        ],
+    },
+    {
+        id: "lotus",
+        name: "Lotus",
+        image: "/maps/lotus.webp",
+        smokes: [
+            { id: "lotus-1", x: 22, y: 48, label: "A Main",   team: "attacker" },
+            { id: "lotus-2", x: 50, y: 25, label: "B Main",   team: "attacker" },
+            { id: "lotus-3", x: 78, y: 48, label: "C Main",   team: "attacker" },
+            { id: "lotus-4", x: 36, y: 62, label: "A Rubble", team: "defender" },
+            { id: "lotus-5", x: 64, y: 62, label: "C Mound",  team: "defender" },
+        ],
+    },
+    {
+        id: "sunset",
+        name: "Sunset",
+        image: "/maps/sunset.avif",
+        smokes: [
+            { id: "sunset-1", x: 25, y: 40, label: "A Main",      team: "attacker" },
+            { id: "sunset-2", x: 50, y: 52, label: "Mid Market",   team: "defender" },
+            { id: "sunset-3", x: 75, y: 38, label: "B Main",       team: "attacker" },
+            { id: "sunset-4", x: 38, y: 25, label: "A Lobby",      team: "attacker" },
+            { id: "sunset-5", x: 62, y: 65, label: "B Alley",      team: "defender" },
+        ],
+    },
+    {
+        id: "abyss",
+        name: "Abyss",
+        image: "/maps/abyss.avif",
+        smokes: [
+            { id: "abyss-1", x: 28, y: 38, label: "A Main", team: "attacker" },
+            { id: "abyss-2", x: 50, y: 50, label: "Mid",    team: "defender" },
+            { id: "abyss-3", x: 72, y: 38, label: "B Main", team: "attacker" },
+            { id: "abyss-4", x: 38, y: 62, label: "A Drop", team: "defender" },
+            { id: "abyss-5", x: 62, y: 62, label: "B Drop", team: "defender" },
+        ],
+    },
 ];
