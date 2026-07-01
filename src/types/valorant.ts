@@ -31,6 +31,7 @@ export interface ValorantMap {
     name: string;
     image: string;
     smokes: SmokeSpot[];
+    featuredAgents: string[];
 }
 
 export interface TeamComposition {
@@ -38,4 +39,12 @@ export interface TeamComposition {
     name: string;
     mapId: string;
     agents: Agent[];
+}
+
+export interface StoredSmoke {
+    id: string;
+    x: number;
+    y: number;
+    label: string;
+    team: SmokeTeam;
 }

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { prisma } from "../../../lib/db";
 import { maps } from "../../../data/maps";
 import { SMOKE_STYLES } from "../../../lib/smoke-styles";
-import type { StoredSmoke } from "../../../types/valorant";
+import { parseStoredSmokes } from "../../../lib/smoke-json";
 
 export default async function LayoutPage({
     params,
@@ -23,7 +23,7 @@ export default async function LayoutPage({
     const map = maps.find((m) => m.id === layout.mapId);
     if (!map) notFound();
 
-    const smokes = layout.smokes as unknown as StoredSmoke[];
+    const smokes = parseStoredSmokes(layout.smokes);
     const authorHandle = layout.user.email.split("@")[0];
 
     return (

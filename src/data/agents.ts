@@ -6,7 +6,7 @@ export const agents: Agent[] = [
         id: "jett",
         name: "Jett",
         role: "Duelist",
-        image: "/agents/jett.webp",
+        image: "/agents/jett.png",
         abilities: [
             { key: "C", name: "Cloudburst", description: "Lance un nuage de fumée" },
             { key: "Q", name: "Updraft", description: "Propulsion verticale" },
@@ -18,7 +18,7 @@ export const agents: Agent[] = [
         id: "reyna",
         name: "Reyna",
         role: "Duelist",
-        image: "/agents/reyna.webp",
+        image: "/agents/reyna.png",
         abilities: [
             { key: "C", name: "Leer", description: "Orbe aveuglant traversant les murs" },
             { key: "Q", name: "Devour", description: "Consume une âme pour se soigner" },
@@ -30,7 +30,7 @@ export const agents: Agent[] = [
         id: "raze",
         name: "Raze",
         role: "Duelist",
-        image: "/agents/raze.webp",
+        image: "/agents/raze.png",
         abilities: [
             { key: "C", name: "Boom Bot", description: "Robot cherchant les ennemis et explosant" },
             { key: "Q", name: "Blast Pack", description: "Grenade adhésive / propulseur" },
@@ -42,7 +42,7 @@ export const agents: Agent[] = [
         id: "phoenix",
         name: "Phoenix",
         role: "Duelist",
-        image: "/agents/phoenix.webp",
+        image: "/agents/phoenix.png",
         abilities: [
             { key: "C", name: "Blaze", description: "Mur de feu courbe" },
             { key: "Q", name: "Curveball", description: "Flash contournant les angles" },
@@ -54,7 +54,7 @@ export const agents: Agent[] = [
         id: "yoru",
         name: "Yoru",
         role: "Duelist",
-        image: "/agents/yoru.webp",
+        image: "/agents/yoru.png",
         abilities: [
             { key: "C", name: "Fakeout", description: "Clone de pas sonores" },
             { key: "Q", name: "Blindside", description: "Flash rebondissante" },
@@ -66,7 +66,7 @@ export const agents: Agent[] = [
         id: "neon",
         name: "Neon",
         role: "Duelist",
-        image: "/agents/neon.webp",
+        image: "/agents/neon.png",
         abilities: [
             { key: "C", name: "Fast Lane", description: "Deux murs d'électricité parallèles" },
             { key: "Q", name: "Relay Bolt", description: "Éclair étourdissant" },
@@ -78,7 +78,7 @@ export const agents: Agent[] = [
         id: "iso",
         name: "Iso",
         role: "Duelist",
-        image: "/agents/iso.webp",
+        image: "/agents/iso.png",
         abilities: [
             { key: "C", name: "Contingency", description: "Mur de protection impénétrable" },
             { key: "Q", name: "Undercut", description: "Frappe traversant les murs" },
@@ -92,7 +92,7 @@ export const agents: Agent[] = [
         id: "brimstone",
         name: "Brimstone",
         role: "Controller",
-        image: "/agents/brimstone.webp",
+        image: "/agents/brimstone.png",
         abilities: [
             { key: "C", name: "Incendiary", description: "Grenade incendiaire" },
             { key: "Q", name: "Stim Beacon", description: "Balise de buff de rapidité" },
@@ -104,7 +104,7 @@ export const agents: Agent[] = [
         id: "viper",
         name: "Viper",
         role: "Controller",
-        image: "/agents/viper.webp",
+        image: "/agents/viper.png",
         abilities: [
             { key: "C", name: "Snake Bite", description: "Flaque de poison" },
             { key: "Q", name: "Poison Cloud", description: "Fumée toxique rechargeable" },
@@ -116,7 +116,7 @@ export const agents: Agent[] = [
         id: "omen",
         name: "Omen",
         role: "Controller",
-        image: "/agents/omen.webp",
+        image: "/agents/omen.png",
         abilities: [
             { key: "C", name: "Shrouded Step", description: "Téléportation courte distance" },
             { key: "Q", name: "Paranoia", description: "Flash traversant les murs" },
@@ -128,7 +128,7 @@ export const agents: Agent[] = [
         id: "astra",
         name: "Astra",
         role: "Controller",
-        image: "/agents/astra.webp",
+        image: "/agents/astra.png",
         abilities: [
             { key: "C", name: "Nova Pulse", description: "Étoile explosion étourdissante" },
             { key: "Q", name: "Nebula", description: "Étoile fumée" },
@@ -140,7 +140,7 @@ export const agents: Agent[] = [
         id: "harbor",
         name: "Harbor",
         role: "Controller",
-        image: "/agents/harbor.webp",
+        image: "/agents/harbor.png",
         abilities: [
             { key: "C", name: "Cove", description: "Bulle d'eau protectrice" },
             { key: "Q", name: "High Tide", description: "Mur d'eau directionnel" },
@@ -152,7 +152,7 @@ export const agents: Agent[] = [
         id: "clove",
         name: "Clove",
         role: "Controller",
-        image: "/agents/clove.webp",
+        image: "/agents/clove.png",
         abilities: [
             { key: "C", name: "Meddle", description: "Grenade de décroissance" },
             { key: "Q", name: "Pick-Me-Up", description: "Boost de soin sur kill" },
@@ -166,7 +166,7 @@ export const agents: Agent[] = [
         id: "sova",
         name: "Sova",
         role: "Initiator",
-        image: "/agents/sova.webp",
+        image: "/agents/sova.png",
         abilities: [
             { key: "C", name: "Shock Bolt", description: "Flèche électrique rebondissante" },
             { key: "Q", name: "Owl Drone", description: "Drone de reconnaissance" },
@@ -178,7 +178,7 @@ export const agents: Agent[] = [
         id: "breach",
         name: "Breach",
         role: "Initiator",
-        image: "/agents/breach.webp",
+        image: "/agents/breach.png",
         abilities: [
             { key: "C", name: "Aftershock", description: "Détonation traversant les murs" },
             { key: "Q", name: "Flashpoint", description: "Flash traversant les murs" },
@@ -190,7 +190,7 @@ export const agents: Agent[] = [
         id: "skye",
         name: "Skye",
         role: "Initiator",
-        image: "/agents/skye.webp",
+        image: "/agents/skye.png",
         abilities: [
             { key: "C", name: "Regrowth", description: "Soin de zone pour l'équipe" },
             { key: "Q", name: "Trailblazer", description: "Jaguar de scouting/étourdissement" },
@@ -202,7 +202,7 @@ export const agents: Agent[] = [
         id: "kayo",
         name: "KAY/O",
         role: "Initiator",
-        image: "/agents/kayo.webp",
+        image: "/agents/kayo.png",
         abilities: [
             { key: "C", name: "FRAG/ment", description: "Grenade à impulsion" },
             { key: "Q", name: "FLASH/drive", description: "Flash lançable ou jetée" },
@@ -214,7 +214,7 @@ export const agents: Agent[] = [
         id: "fade",
         name: "Fade",
         role: "Initiator",
-        image: "/agents/fade.webp",
+        image: "/agents/fade.png",
         abilities: [
             { key: "C", name: "Prowler", description: "Créature traquant les ennemis révélés" },
             { key: "Q", name: "Seize", description: "Orbe retenant et révélant les ennemis" },
@@ -226,7 +226,7 @@ export const agents: Agent[] = [
         id: "gekko",
         name: "Gekko",
         role: "Initiator",
-        image: "/agents/gekko.webp",
+        image: "/agents/gekko.png",
         abilities: [
             { key: "C", name: "Wingman", description: "Créature plantant ou défusant la spike" },
             { key: "Q", name: "Dizzy", description: "Créature aveuglant les ennemis" },
@@ -240,7 +240,7 @@ export const agents: Agent[] = [
         id: "sage",
         name: "Sage",
         role: "Sentinel",
-        image: "/agents/sage.webp",
+        image: "/agents/sage.png",
         abilities: [
             { key: "C", name: "Barrier Orb", description: "Mur de glace solide" },
             { key: "Q", name: "Slow Orb", description: "Zone ralentissante au sol" },
@@ -252,7 +252,7 @@ export const agents: Agent[] = [
         id: "cypher",
         name: "Cypher",
         role: "Sentinel",
-        image: "/agents/cypher.webp",
+        image: "/agents/cypher.png",
         abilities: [
             { key: "C", name: "Trapwire", description: "Fil piège révélant et étourdissant" },
             { key: "Q", name: "Cyber Cage", description: "Cage de surveillance sonore" },
@@ -264,7 +264,7 @@ export const agents: Agent[] = [
         id: "killjoy",
         name: "Killjoy",
         role: "Sentinel",
-        image: "/agents/killjoy.webp",
+        image: "/agents/killjoy.png",
         abilities: [
             { key: "C", name: "Nanoswarm", description: "Grenade à nuée de nanobots" },
             { key: "Q", name: "Alarmbot", description: "Robot détectant et vulnérabilisant" },
@@ -276,7 +276,7 @@ export const agents: Agent[] = [
         id: "chamber",
         name: "Chamber",
         role: "Sentinel",
-        image: "/agents/chamber.webp",
+        image: "/agents/chamber.png",
         abilities: [
             { key: "C", name: "Trademark", description: "Piège ralentissant et alertant" },
             { key: "Q", name: "Headhunter", description: "Pistolet lourd précis" },
@@ -288,7 +288,7 @@ export const agents: Agent[] = [
         id: "deadlock",
         name: "Deadlock",
         role: "Sentinel",
-        image: "/agents/deadlock.webp",
+        image: "/agents/deadlock.png",
         abilities: [
             { key: "C", name: "GravNet", description: "Grenade forçant les ennemis à s'accroupir" },
             { key: "Q", name: "Sonic Sensor", description: "Capteur étourdissant au son" },
@@ -300,7 +300,7 @@ export const agents: Agent[] = [
         id: "vyse",
         name: "Vyse",
         role: "Sentinel",
-        image: "/agents/vyse.webp",
+        image: "/agents/vyse.png",
         abilities: [
             { key: "C", name: "Shear", description: "Barrière végétale surgissant du sol" },
             { key: "Q", name: "Arc Rose", description: "Fleur flash se déclenchant au regard" },

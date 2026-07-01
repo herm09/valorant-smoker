@@ -11,7 +11,7 @@ Application permettant aux joueurs de sélectionner une map Valorant, générer 
 - **Framework** : Next.js 16.2.9 — App Router, Server Components par défaut
 - **Styling** : Tailwind CSS 4
 - **DB** : PostgreSQL via Neon + Prisma
-- **Auth** : aucune
+- **Auth** : Next-auth
 - **Tests** : aucun
 
 ## Structure du projet

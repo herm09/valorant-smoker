@@ -1,25 +1,10 @@
 import Image from "next/image";
-import type { ValorantMap, SmokeTeam } from "../types/valorant";
-
-const SMOKE_STYLES: Record<SmokeTeam, { gradient: string; shadow: string; border: string; label: string }> = {
-    attacker: {
-        gradient: "radial-gradient(circle at 38% 32%, rgba(255,100,80,0.72) 0%, rgba(220,60,40,0.42) 38%, rgba(180,30,20,0.15) 65%, transparent 100%)",
-        shadow:   "0 0 18px rgba(239,68,68,0.55), 0 0 48px rgba(239,68,68,0.15)",
-        border:   "1px solid rgba(239,68,68,0.35)",
-        label:    "group-hover:text-red-400",
-    },
-    defender: {
-        gradient: "radial-gradient(circle at 38% 32%, rgba(80,150,255,0.72) 0%, rgba(50,120,220,0.42) 38%, rgba(30,80,200,0.15) 65%, transparent 100%)",
-        shadow:   "0 0 18px rgba(59,130,246,0.55), 0 0 48px rgba(59,130,246,0.15)",
-        border:   "1px solid rgba(59,130,246,0.35)",
-        label:    "group-hover:text-blue-400",
-    },
-};
+import type { ValorantMap } from "../types/valorant";
+import { SMOKE_STYLES } from "../lib/smoke-styles";
 
 export default function MapImage({ map }: { map: ValorantMap }) {
     return (
         <div className="relative mx-auto w-fit overflow-hidden rounded-xl">
-            {/* width/height=0 + sizes laisse le CSS contrôler les dimensions tout en gardant l'optimisation Next.js */}
             <Image
                 src={map.image}
                 alt={map.name}
