@@ -17,7 +17,7 @@ export const authOptions: AuthOptions = {
                 password: { label: "Password", type: "password" },
             },
             async authorize(credentials) {
-                const email    = credentials?.email;
+                const email    = credentials?.email?.trim().toLowerCase();
                 const password = credentials?.password;
                 if (!email || !password) return null;
 
