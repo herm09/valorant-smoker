@@ -25,9 +25,10 @@ export const metadata: Metadata = {
 };
 
 const NAV_LINKS = [
-  { href: "/",             label: "Maps"         },
-  { href: "/compositions", label: "Compositions" },
-  { href: "/community",    label: "Community"    },
+  { href: "/",               label: "Maps"         },
+  { href: "/compositions",   label: "Compositions" },
+  { href: "/smoke-layouts",  label: "My Layouts"   },
+  { href: "/community",      label: "Community"    },
 ];
 
 export default async function RootLayout({

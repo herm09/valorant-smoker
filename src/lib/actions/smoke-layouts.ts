@@ -27,6 +27,7 @@ export async function saveSmokeLayout(data: {
 
     revalidatePath(`/maps/${data.mapId}`);
     revalidatePath("/community");
+    revalidatePath("/smoke-layouts");
 }
 
 export async function deleteSmokeLayout(formData: FormData): Promise<void> {
@@ -43,6 +44,7 @@ export async function deleteSmokeLayout(formData: FormData): Promise<void> {
 
     await prisma.smokeLayout.delete({ where: { id } });
     revalidatePath("/community");
+    revalidatePath("/smoke-layouts");
     revalidatePath(`/maps/${layout.mapId}`);
 }
 
@@ -64,5 +66,6 @@ export async function togglePublic(formData: FormData): Promise<void> {
     });
 
     revalidatePath("/community");
+    revalidatePath("/smoke-layouts");
     revalidatePath(`/layouts/${id}`);
 }

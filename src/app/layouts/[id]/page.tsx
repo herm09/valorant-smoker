@@ -1,6 +1,8 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../../../lib/auth";
 import { prisma } from "../../../lib/db";
 import { maps } from "../../../data/maps";
 import { SMOKE_STYLES } from "../../../lib/smoke-styles";
@@ -12,31 +14,41 @@ export default async function LayoutPage({
     params: Promise<{ id: string }>;
 }) {
     const { id } = await params;
+    const session = await getServerSession(authOptions);
 
     const layout = await prisma.smokeLayout.findUnique({
         where:   { id },
         include: { user: { select: { email: true } } },
     });
 
-    if (!layout || !layout.isPublic) notFound();
+    if (!layout) notFound();
+
+    const isOwner = session?.user?.id === layout.userId;
+
+    if (!layout.isPublic && !isOwner) {
+        if (!session) redirect("/login");
+        notFound();
+    }
 
     const map = maps.find((m) => m.id === layout.mapId);
     if (!map) notFound();
 
     const smokes = parseStoredSmokes(layout.smokes);
     const authorHandle = layout.user.email.split("@")[0];
+    const backHref = isOwner ? "/smoke-layouts" : "/community";
+    const backLabel = isOwner ? "My Layouts" : "Community";
 
     return (
         <main className="min-h-screen p-8">
             <Link
-                href="/community"
-                className="mb-6 inline-block text-sm text-gray-500 transition-colors hover:text-gray-100"
+                href={backHref}
+                className="mb-6 inline-block text-sm text-gray-500 transition-colors hover:text-gray-100 light:hover:text-gray-700"
             >
-                ← Community
+                ← {backLabel}
             </Link>
 
             <div className="mb-6">
-                <h1 className="text-3xl font-bold">{layout.name}</h1>
+                <h1 className="text-3xl font-bold text-white light:text-gray-900">{layout.name}</h1>
                 <p className="mt-1 text-sm text-gray-500">
                     {map.name} · by {authorHandle} ·{" "}
                     {layout.createdAt.toLocaleDateString("en-GB", {
@@ -84,11 +96,11 @@ export default async function LayoutPage({
             <div className="mt-4 flex items-center gap-6 text-sm">
                 <div className="flex items-center gap-2">
                     <span className="h-3 w-3 rounded-full bg-green-500" />
-                    <span className="text-gray-400">Attackers</span>
+                    <span className="text-gray-400 light:text-gray-600">Attackers</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <span className="h-3 w-3 rounded-full bg-red-500" />
-                    <span className="text-gray-400">Defenders</span>
+                    <span className="text-gray-400 light:text-gray-600">Defenders</span>
                 </div>
                 <span className="text-gray-500">{smokes.length} smoke{smokes.length !== 1 ? "s" : ""}</span>
             </div>
