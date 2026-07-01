@@ -14,17 +14,17 @@ type Props = {
 export default function CompositionCard({ id, name, mapName, agents, createdAt }: Props) {
     return (
         <div className="group relative rounded-xl border border-gray-700 bg-gray-900 p-4 transition-colors hover:border-gray-500 light:border-gray-200 light:bg-white light:hover:border-gray-300">
-            {/* Clickable overlay */}
-            <Link href={`/compositions/${id}`} className="absolute inset-0 z-0 rounded-xl" />
+            {/* Clickable overlay — above content but below delete button */}
+            <Link href={`/compositions/${id}`} className="absolute inset-0 z-10 rounded-xl" />
 
-            {/* Content sits above the link */}
-            <div className="relative z-10">
+            {/* Content */}
+            <div className="relative">
                 <div className="mb-3 flex items-start justify-between gap-2">
                     <div>
                         <h3 className="font-semibold text-white light:text-gray-900">{name}</h3>
                         <p className="text-xs text-gray-400 light:text-gray-500">{mapName}</p>
                     </div>
-                    <form action={deleteComposition}>
+                    <form action={deleteComposition} className="relative z-20">
                         <input type="hidden" name="id" value={id} />
                         <button
                             type="submit"
