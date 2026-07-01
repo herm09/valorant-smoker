@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { maps } from "../../../data/maps";
+import { agents } from "../../../data/agents";
 import MapImage from "../../../components/map-image";
+import TeamBuilder from "../../../components/team-builder";
 
 export default async function MapPage({
     params,
@@ -32,13 +34,15 @@ export default async function MapPage({
                     <span className="text-gray-600 dark:text-gray-400">Attackers</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
-                    <span className="h-3 w-3 rounded-full bg-blue-500" />
+                    <span className="h-3 w-3 rounded-full bg-green-500" />
                     <span className="text-gray-600 dark:text-gray-400">Defenders</span>
                 </div>
                 <span className="text-sm text-gray-400">
                     {map.smokes.length} smoke position{map.smokes.length > 1 ? "s" : ""}
                 </span>
             </div>
+
+            <TeamBuilder agents={agents} mapId={map.id} map={map} />
         </main>
     );
 }
