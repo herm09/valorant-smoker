@@ -4,6 +4,7 @@ import { maps } from "../../../data/maps";
 import { agents } from "../../../data/agents";
 import MapImage from "../../../components/map-image";
 import TeamBuilder from "../../../components/team-builder";
+import SmokeEditor from "../../../components/smoke-editor";
 
 export default async function MapPage({
     params,
@@ -43,6 +44,8 @@ export default async function MapPage({
             </div>
 
             <TeamBuilder agents={agents} mapId={map.id} map={map} />
+
+            <SmokeEditor map={map} />
         </main>
     );
 }

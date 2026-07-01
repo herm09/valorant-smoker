@@ -42,6 +42,9 @@ export default async function RootLayout({
           <Link href="/compositions" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
             Compositions
           </Link>
+          <Link href="/community" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+            Community
+          </Link>
           <div className="ml-auto">
             <AuthNav userEmail={userEmail} />
           </div>
