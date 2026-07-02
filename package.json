@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "audit:compositions": "tsx scripts/audit-compositions.ts"
+    "audit:compositions": "tsx scripts/audit-compositions.ts",
+    "export:data": "tsx scripts/export-data.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",
