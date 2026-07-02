@@ -6,14 +6,13 @@ type Props = {
     mapName: string;
     mapImage: string;
     smokeCount: number;
-    authorEmail: string;
+    authorHandle: string;
     createdAt: Date;
 };
 
 export default function SmokeLayoutCard({
-    id, name, mapName, mapImage, smokeCount, authorEmail, createdAt,
+    id, name, mapName, mapImage, smokeCount, authorHandle, createdAt,
 }: Props) {
-    const authorHandle = authorEmail.split("@")[0];
 
     return (
         <div className="flex flex-col overflow-hidden rounded-xl border border-gray-700 bg-gray-900 light:border-gray-200 light:bg-white">

@@ -7,7 +7,7 @@ import { parseStoredSmokes } from "../../lib/smoke-json";
 export default async function CommunityPage() {
     const layouts = await prisma.smokeLayout.findMany({
         where:   { isPublic: true },
-        include: { user: { select: { email: true } } },
+        include: { user: { select: { email: true, username: true } } },
         orderBy: { createdAt: "desc" },
     });
 
@@ -40,7 +40,7 @@ export default async function CommunityPage() {
                                 mapName={map?.name ?? layout.mapId}
                                 mapImage={map?.image ?? ""}
                                 smokeCount={smokeCount}
-                                authorEmail={layout.user.email}
+                                authorHandle={layout.user.username ?? layout.user.email.split("@")[0]}
                                 createdAt={layout.createdAt}
                             />
                         );
