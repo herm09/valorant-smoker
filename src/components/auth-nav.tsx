@@ -9,7 +9,12 @@ export default function AuthNav({ userEmail }: Props) {
     if (userEmail) {
         return (
             <div className="flex items-center gap-4">
-                <span className="hidden text-xs text-gray-500 sm:inline light:text-gray-400">{userEmail}</span>
+                <Link
+                    href="/profile"
+                    className="hidden text-xs text-gray-500 transition-colors hover:text-white sm:inline light:text-gray-400 light:hover:text-gray-900"
+                >
+                    {userEmail}
+                </Link>
                 <button
                     type="button"
                     onClick={() => signOut({ callbackUrl: "/" })}
