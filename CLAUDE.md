@@ -7,11 +7,11 @@ Application permettant aux joueurs de sélectionner une map Valorant, générer 
 
 ## Stack technique
 
-- **Langage** : TypeScript 5 (strict mode, pas de `any`)
-- **Framework** : Next.js 16.2.9 — App Router, Server Components par défaut
+- **Langage** : TypeScript 5 (strict mode, pas de `any`) <!-- détection des erreurs, plus facile a maintenir, plus de sécurité, manipulation de bcp de données -->
+- **Framework** : Next.js 16.2.9 — App Router, Server Components par défaut <!-- permet routage, système de page, rendu coté serveur, auth, server actions -->
 - **Styling** : Tailwind CSS 4
-- **DB** : PostgreSQL via Neon + Prisma
-- **Auth** : Next-auth
+- **DB** : PostgreSQL via Neon + Prisma <!-- bdd relationnelle + fonctionne avec prisma, compatible vercel, gratuit + communique sans écrire du sql -->
+- **Auth** : Next-auth <!-- gère connexion, sessions, cookies, sécurité -->
 - **Tests** : aucun
 
 ## Structure du projet
